@@ -29,6 +29,12 @@ latest_posts:
 
 Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
+Welcome! I’m Roni Gattegno — a Ph.D. candidate at Tel Aviv University, working at the intersection of neuroscience, biomedical engineering, and clinical translation. My research focuses on developing ultrasound and nanobubble technologies to noninvasively open the blood–brain barrier and improve therapy and diagnostics for brain cancer.
+
+Beyond my current work, I am motivated by a broader mission: to bridge fundamental neuroscience with patient-centered impact. Having trained in systems neuroscience and engineering, I am now expanding my research to explore the mechanisms of chronic pain and to develop new diagnostic and therapeutic approaches.
+
+I believe that science should not only uncover how the brain works but also transform the way we treat disease. My long-term vision is to integrate engineering innovation, quantitative neuroscience, and clinical research to improve the lives of people affected by chronic pain disorders.
+
 Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
 
 Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
