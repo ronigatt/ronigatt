@@ -23,7 +23,8 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
-Welcome! I’m Roni Gattegno — a Ph.D. candidate at Tel Aviv University, working at the intersection of neuroscience, biomedical engineering, and clinical translation. My research focuses on developing ultrasound and nanobubble technologies to noninvasively open the blood–brain barrier and improve therapy and diagnostics for brain cancer.
+
+Welcome! I’m Roni Gattegno, a Ph.D. candidate at Tel Aviv University, working at the intersection of neuroscience, biomedical engineering, and clinical translation. My research focuses on developing ultrasound and nanobubble technologies to noninvasively open the blood–brain barrier and improve therapy and diagnostics for brain cancer.
 
 Beyond my current work, I am motivated by a broader mission: to bridge fundamental neuroscience with patient-centered impact. Having trained in systems neuroscience and engineering, I am now expanding my research to explore the mechanisms of chronic pain and to develop new diagnostic and therapeutic approaches.
 
