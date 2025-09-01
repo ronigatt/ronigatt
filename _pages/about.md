@@ -28,8 +28,3 @@ Welcome! I’m Roni Gattegno — a Ph.D. candidate at Tel Aviv University, worki
 Beyond my current work, I am motivated by a broader mission: to bridge fundamental neuroscience with patient-centered impact. Having trained in systems neuroscience and engineering, I am now expanding my research to explore the mechanisms of chronic pain and to develop new diagnostic and therapeutic approaches.
 
 I believe that science should not only uncover how the brain works but also transform the way we treat disease. My long-term vision is to integrate engineering innovation, quantitative neuroscience, and clinical research to improve the lives of people affected by chronic pain disorders.
-
-Link to your favorite [subreddit](http://reddit.com). 
- `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
