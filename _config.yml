@@ -631,7 +631,7 @@ jekyll_get_json:
 jsonresume:
   # - basics
   - education
-  - "professional experience"
+  - professional_experience
   - teaching
   - awards
   - publications
