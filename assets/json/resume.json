@@ -167,20 +167,68 @@
     }
   ],
 
-  "awards": [
-    { "title": "Prof. Rahamimoff Travel Grants for Young Scientists", "date": "2025" },
-    { "title": "FENS Regional Meeting Travel Grant", "date": "2025" },
-    { "title": "Adams Fellowships Program, Israel Academy of Sciences and Humanities", "date": "2024" },
-    { "title": "Teva BioInnovators Student Excellence Fellowship", "date": "2023" },
-    { "title": "ISTU Student Poster Award", "date": "2023" },
-    { "title": "FENS Travel Grant", "date": "2022" },
-    { "title": "Sagol School of Neuroscience Dean's Honor List", "date": "2022" },
-    { "title": "Sagol School of Neuroscience Dean's Honor List", "date": "2021" },
-    { "title": "Sagol School of Neuroscience Dean's Honor List", "date": "2019" },
-    { "title": "\"Hamerkaz Haezrahi\" Scholarship", "date": "2021" },
-    { "title": "Salti Foundation Scholarship", "date": "2020" },
-    { "title": "Excellence Program, Faculty of Engineering", "date": "2018–2020" }
-  ],
+"awards": [
+  {
+    "title": "Prof. Rahamimoff Travel Grants for Young Scientists",
+    "date": "2025",
+    "url": "https://www.bsf.org.il/search-grant/?FilterProgram=Travel&PageSize=15&fbclid=IwY2xjawMj4L5leHRuA2FlbQIxMABicmlkETE2a2doVE9DWHVEbDliWnN6AR7t3XmKJ4L65fFV2SGDwQ40dJCBvPoR58oqYpDcWdHU_kQKwnBNw0omHb_y5w_aem_Mot312680nWkIHEUA3qfxQ#:~:text=Ms.%20Roni%20Gattegno,Aviv%20University%2C%20Israel"
+  },
+  {
+    "title": "FENS Regional Meeting Travel Grant",
+    "date": "2025",
+    "url": "https://example.com/awards/fens-regional-meeting-travel-grant"
+  },
+  {
+    "title": "Adams Fellowships Program, Israel Academy of Sciences and Humanities",
+    "date": "2024",
+    "url": "https://adams.academy.ac.il/fellow/roni-gattegno/"
+  },
+  {
+    "title": "Teva BioInnovators Student Excellence Fellowship",
+    "date": "2023",
+    "url": "https://example.com/awards/teva-bioinnovators-student-excellence"
+  },
+  {
+    "title": "ISTU Student Poster Award",
+    "date": "2023",
+    "url": "https://example.com/awards/istu-student-poster"
+  },
+  {
+    "title": "FENS Travel Grant",
+    "date": "2022",
+    "url": "https://example.com/awards/fens-travel-grant"
+  },
+  {
+    "title": "Sagol School of Neuroscience Dean's Honor List",
+    "date": "2022",
+    "url": "https://example.com/awards/sagol-deans-list-2022"
+  },
+  {
+    "title": "Sagol School of Neuroscience Dean's Honor List",
+    "date": "2021",
+    "url": "https://example.com/awards/sagol-deans-list-2021"
+  },
+  {
+    "title": "Sagol School of Neuroscience Dean's Honor List",
+    "date": "2019",
+    "url": "https://example.com/awards/sagol-deans-list-2019"
+  },
+  {
+    "title": "\"Hamerkaz Haezrahi\" Scholarship",
+    "date": "2021",
+    "url": "https://example.com/awards/hamerkaz-haezrahi-scholarship"
+  },
+  {
+    "title": "Salti Foundation Scholarship",
+    "date": "2020",
+    "url": "https://example.com/awards/salti-foundation-scholarship"
+  },
+  {
+    "title": "Excellence Program, Faculty of Engineering",
+    "date": "2018–2020",
+    "url": "https://example.com/awards/engineering-excellence-program"
+  }
+]
 
   "volunteer": [
     { "organization": "Engineers Without Borders", "startDate": "2021", "endDate": "2023" },
