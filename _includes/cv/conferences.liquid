@@ -1,0 +1,20 @@
+<section class="cv-section" id="conferences">
+  <h3>Conferences</h3>
+  {% assign items = site.data.resume.conferences | default: empty %}
+  {% for p in items %}
+    <div class="item">
+      <div class="row">
+        <div class="col-sm-9">
+          <strong>{{ p.name }}</strong>
+        </div>
+        <div class="col-sm-3 text-sm-right">
+          {{ p.startDate }}{% if p.endDate %} – {{ p.endDate }}{% endif %}
+        </div>
+      </div>
+      {% if p.summary %}<p>{{ p.summary }}</p>{% endif %}
+      {% if p.highlights %}
+        <ul>{% for h in p.highlights %}<li>{{ h }}</li>{% endfor %}</ul>
+      {% endif %}
+    </div>
+  {% endfor %}
+</section>
