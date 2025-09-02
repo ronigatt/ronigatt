@@ -32,14 +32,14 @@
     {
       "institution": "Faculty of Engineering, Tel Aviv University",
       "studyType": "B.Sc. in Biomedical Engineering",
-      "startDate": "2017"
+      "startDate": "2017",
       "endDate": "2021",
       "score": "Magna cum laude"
     },
     {
       "institution": "Sagol School of Neuroscience, Tel Aviv University",
       "studyType": "B.Sc. in Biology (Neuroscience)",
-      "startDate": "2017"
+      "startDate": "2017",
       "endDate": "2021",
       "score": "Magna cum laude"
     }
