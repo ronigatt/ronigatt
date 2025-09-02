@@ -71,7 +71,48 @@
   ],
 
   "teaching": [
-  ],
+  {
+    "institution": "Tel Aviv University",
+    "course": "Radiation and Imaging in Medicine",
+    "role": "Teaching Assistant",
+    "startDate": "2023",
+    "endDate": "2026"
+  },
+  {
+    "institution": "Tel Aviv University",
+    "course": "Laboratory in Biomedical Engineering",
+    "role": "Teaching Assistant",
+    "startDate": "2023",
+    "endDate": "2026"
+  },
+  {
+    "institution": "Tel Aviv University",
+    "course": "Biological Control Systems",
+    "role": "Teaching Assistant",
+    "startDate": "2023",
+    "endDate": "2026"
+  },
+  {
+    "institution": "Sagol School of Neuroscience, Tel Aviv University",
+    "course": "Mathematical Modeling of Neurons and Networks",
+    "role": "Teaching Assistant",
+    "startDate": "2022"
+  },
+  {
+    "institution": "Extra Student",
+    "course": "Python",
+    "role": "Teaching Assistant",
+    "startDate": "2020",
+    "endDate": "2023"
+  },
+  {
+    "institution": "Extra Student",
+    "course": "Partial Differential Equations",
+    "role": "Teaching Assistant",
+    "startDate": "2020",
+    "endDate": "2023"
+  }
+]
 
   "publications": [
     {
