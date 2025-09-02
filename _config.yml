@@ -7,7 +7,7 @@ first_name: Roni
 middle_name: #
 last_name: Gattegno
 contact_note: >
-  <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=ffffff&w=a&t=n&d=hT5XuQBcSwFFgZyGkcyO3l6H_8LjXg1BHPFIyrR7eis&co=181f23&cmo=ad82d1&cmn=52269e'></script>
+  <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=ffffff&w=300&t=n&d=hT5XuQBcSwFFgZyGkcyO3l6H_8LjXg1BHPFIyrR7eis&co=040405&cmo=ad82d1&cmn=52269e'></script>
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
