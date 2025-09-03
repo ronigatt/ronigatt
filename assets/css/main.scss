@@ -42,3 +42,8 @@ $max-content-width: {{ site.max_width }};
   top: 0;
   text-transform: none; /* keep text exactly as typed */
 }
+
+.cv-section#awards a {
+  color: inherit;
+  text-decoration: underline;
+}
