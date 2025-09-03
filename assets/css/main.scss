@@ -32,16 +32,19 @@ $max-content-width: {{ site.max_width }};
   display: none;
 }
 
-/* Make all text in Awards the same color */
-#awards {
-  color: var(--global-theme-color); /* or any hex you prefer */
+/* Base style: all award titles same color */
+#awards .award-link,
+#awards .award-fake-link {
+  color: var(--global-theme-color); /* or your chosen hex */
 }
 
-/* Force links to inherit the same color and show underline */
-#awards a,
-#awards a:visited,
-#awards a:hover,
-#awards a:active {
-  color: inherit;
-  text-decoration: underline;   /* change to none/hover if you prefer */
+/* Only real links get underline */
+#awards .award-link {
+  text-decoration: underline;
+}
+
+/* Fake links (no URL) look same color but no underline */
+#awards .award-fake-link {
+  text-decoration: none;
+  cursor: default;
 }
