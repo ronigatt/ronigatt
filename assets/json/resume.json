@@ -98,6 +98,7 @@
       "institution": "Sagol School of Neuroscience, Tel Aviv University",
       "course": "Mathematical Modeling of Neurons and Networks",
       "role": "Teaching Assistant",
+      "startDate": "2022",
       "endDate": "2022"
     },
     {
@@ -224,7 +225,7 @@
 
   "volunteer": [
     { "organization": "Engineers Without Borders", "startDate": "2021", "endDate": "2023" },
-    { "organization": "Hevruta (bridging program for women)","startDate": "2021", "endDate": "2021" },
+    { "organization": "Hevruta (bridging program for women)","startDate": "2020", "endDate": "2021" },
     { "organization": "Mithabrim+ (Dean of Students) – nanosatellites outreach, teaching science to girls", "startDate": "2019", "endDate": "2020" },
     { "organization": "Walking Together – mentoring program for first-year undergraduates", "startDate": "2018", "endDate": "2020" }
   ],
