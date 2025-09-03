@@ -1,0 +1,35 @@
+{% assign items = site.data.resume.teaching %}
+{% if items and items != empty %}
+<section id="teaching" class="cv-section">
+  <h2 class="cv-section-title">Teaching</h2>
+  <ul class="cv-list">
+  {% for item in items %}
+    {% assign start_raw = item.startDate %}
+    {% assign end_raw   = item.endDate %}
+
+    {%- comment -%} Robust date formatting: "2025-06" → "Jun 2025", "2023" → "2023" {%- endcomment -%}
+    {% capture start_fmt %}
+      {% if start_raw %}
+        {% if start_raw contains '-' %}{{ start_raw | date: "%b %Y" }}{% else %}{{ start_raw }}{% endif %}
+      {% endif %}
+    {% endcapture %}
+    {% capture end_fmt %}
+      {% if end_raw %}
+        {% if end_raw contains '-' %}{{ end_raw | date: "%b %Y" }}{% else %}{{ end_raw }}{% endif %}
+      {% else %}
+        Present
+      {% endif %}
+    {% endcapture %}
+
+    <li class="cv-item">
+      <strong>
+        {{ item.title | default: item.position | default: item.role | default: "Teaching" }}
+      </strong>
+      {% if item.course %} — {{ item.course }}{% endif %}
+      {% if item.institution %}, {{ item.institution }}{% endif %}
+      {% if start_fmt or end_fmt %}<span class="cv-dates"> ({{ start_fmt | strip }}–{{ end_fmt | strip }})</span>{% endif %}
+    </li>
+  {% endfor %}
+  </ul>
+</section>
+{% endif %}
