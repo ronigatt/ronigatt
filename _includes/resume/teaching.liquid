@@ -1,35 +1,54 @@
-{% assign items = site.data.resume.teaching %}
-{% if items and items != empty %}
-<section id="teaching" class="cv-section">
-  <h2 class="cv-section-title">Teaching</h2>
-  <ul class="cv-list">
-  {% for item in items %}
-    {% assign start_raw = item.startDate %}
-    {% assign end_raw   = item.endDate %}
-
-    {%- comment -%} Robust date formatting: "2025-06" → "Jun 2025", "2023" → "2023" {%- endcomment -%}
-    {% capture start_fmt %}
-      {% if start_raw %}
-        {% if start_raw contains '-' %}{{ start_raw | date: "%b %Y" }}{% else %}{{ start_raw }}{% endif %}
+<li class="list-group-item">
+  <div class="row">
+    <!-- Date and Location Column -->
+    <div class="col-xs-2 cl-sm-2 col-md-2 text-center date-column">
+      {% assign startDate = item.startDate | split: '-' | slice: 0, 2 | join: '.' %}
+      {% assign endDate = item.endDate | split: '-' | slice: 0, 2 | join: '.' | default: 'Present' %}
+      {% assign date = startDate | append: ' - ' | append: endDate %}
+      <table class="table-cv">
+        <tbody>
+          <tr>
+            <td>
+              <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px"> {{ date }} </span>
+            </td>
+          </tr>
+          {% if item.location %}
+            <tr>
+              <td>
+                <p class="location">
+                  <i class="fa-solid fa-location-dot iconlocation"></i>
+                  {{ item.location }}
+                </p>
+              </td>
+            </tr>
+          {% endif %}
+        </tbody>
+      </table>
+    </div>
+    <!-- Teaching Details -->
+    <div class="col-xs-10 cl-sm-10 col-md-10 mt-2 mt-md-0">
+      <!-- Double Title Rendering -->
+      <h6 class="title font-weight-bold ml-1 ml-md-4">
+        {% if item.title2 %}
+          <span>{{ item.title }}</span><br>
+          <span>{{ item.title2 }}</span>
+        {% else %}
+          <span>{{ item.title }}</span>
+        {% endif %}
+      </h6>
+      <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ item.institution }}</h6>
+      {% if item.course %}
+        <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ item.course }}</h6>
       {% endif %}
-    {% endcapture %}
-    {% capture end_fmt %}
-      {% if end_raw %}
-        {% if end_raw contains '-' %}{{ end_raw | date: "%b %Y" }}{% else %}{{ end_raw }}{% endif %}
-      {% else %}
-        Present
+      {% if item.details %}
+        <ul class="items">
+          {% for detail in item.details %}
+            <li>
+              <span class="item">{{ detail }}</span>
+            </li>
+          {% endfor %}
+        </ul>
       {% endif %}
-    {% endcapture %}
-
-    <li class="cv-item">
-      <strong>
-        {{ item.title | default: item.position | default: item.role | default: "Teaching" }}
-      </strong>
-      {% if item.course %} — {{ item.course }}{% endif %}
-      {% if item.institution %}, {{ item.institution }}{% endif %}
-      {% if start_fmt or end_fmt %}<span class="cv-dates"> ({{ start_fmt | strip }}–{{ end_fmt | strip }})</span>{% endif %}
-    </li>
-  {% endfor %}
-  </ul>
-</section>
-{% endif %}
+    </div>
+  </div>
+</li>
