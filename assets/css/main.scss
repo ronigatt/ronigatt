@@ -26,11 +26,6 @@ $max-content-width: {{ site.max_width }};
 
 /* ---- CV tweaks ---- */
 
-/* Hide the theme's auto-generated section heading */
-#professional_experience > h2:first-child,
-#professional_experience > h3:first-child {
-  display: none;
-}
 
 /* Base style: all award titles same color */
 #awards .award-link,
