@@ -45,7 +45,7 @@
     }
   ],
 
-  "professional experience": [
+  "professional_experience": [
     {
       "name": "Konofagou Lab, Columbia University",
       "position": "Visiting Researcher",
@@ -224,8 +224,8 @@
 ],
 
   "volunteer": [
-    { "organization": "Engineers Without Borders", "startDate": "2021", "endDate": "2023" },
     { "organization": "Hevruta (bridging program for women)","startDate": "2021", "endDate": "2021" },
+    { "organization": "Engineers Without Borders", "startDate": "2021", "endDate": "2023" }, 
     { "organization": "Mithabrim+ (Dean of Students) – nanosatellites outreach, teaching science to girls", "startDate": "2019", "endDate": "2020" },
     { "organization": "Walking Together – mentoring program for first-year undergraduates", "startDate": "2018", "endDate": "2020" }
   ],
