@@ -1,22 +1,48 @@
-<section class="cv-section" id="professional_experience">
-  <h3>Professional Experience</h3>
-  {% assign items = site.data.resume.professional_experience | default: empty %}
-  {% for w in items %}
-    <div class="item">
-      <div class="row">
-        <div class="col-sm-9">
-          {% if w.position %}<strong>{{ w.position }}</strong>{% endif %}
-          {% if w.name %}{% if w.position %}, {% endif %}{{ w.name }}{% endif %}
-          {% if w.location %} — {{ w.location }}{% endif %}
-        </div>
-        <div class="col-sm-3 text-sm-right">
-          {{ w.startDate }}{% if w.endDate %} – {{ w.endDate }}{% else %} – present{% endif %}
-        </div>
+{%- assign items = site.data.resume.professional_experience | sort: "startDate" | reverse -%}
+{%- if items and items != empty -%}
+  {%- for item in items -%}
+    {%- assign start_raw = item.startDate -%}
+    {%- assign end_raw = item.endDate -%}
+
+    {%- capture start_year -%}
+      {%- if start_raw contains '-' -%}
+        {{ start_raw | date: "%Y" }}
+      {%- else -%}
+        {{ start_raw }}
+      {%- endif -%}
+    {%- endcapture -%}
+
+    {%- capture end_year -%}
+      {%- if end_raw -%}
+        {%- if end_raw contains '-' -%}
+          {{ end_raw | date: "%Y" }}
+        {%- else -%}
+          {{ end_raw }}
+        {%- endif -%}
+      {%- else -%}
+        Present
+      {%- endif -%}
+    {%- endcapture -%}
+
+    <div class="row cv-item">
+      <!-- Left: date -->
+      <div class="col-sm-3 text-muted cv-date">
+        {{ start_year | strip }}–{{ end_year | strip }}
       </div>
-      {% if w.summary %}<p>{{ w.summary }}</p>{% endif %}
-      {% if w.highlights %}
-        <ul>{% for h in w.highlights %}<li>{{ h }}</li>{% endfor %}</ul>
-      {% endif %}
+
+      <!-- Right: content -->
+      <div class="col-sm-9">
+        <div class="font-weight-bold">
+          {{ item.position }}
+        </div>
+        <div class="text-muted">
+          {{ item.name }}
+          {%- if item.location %}, {{ item.location }}{% endif %}
+        </div>
+        {%- if item.summary %}
+          <div class="small mt-1">{{ item.summary }}</div>
+        {%- endif %}
+      </div>
     </div>
-  {% endfor %}
-</section>
+  {%- endfor -%}
+{%- endif -%}
