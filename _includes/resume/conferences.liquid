@@ -1,20 +1,77 @@
-<section class="cv-section" id="conferences">
-  <h3>Conferences</h3>
-  {% assign items = site.data.resume.conferences | default: empty %}
-  {% for p in items %}
-    <div class="item">
+<ul class="card-text font-weight-light list-group list-group-flush">
+  {% assign conferences = site.data.resume.conferences | sort: 'startDate' | reverse %}
+  {% for p in conferences %}
+    <li class="list-group-item">
       <div class="row">
-        <div class="col-sm-9">
-          <strong>{{ p.name }}</strong>
+        <!-- Date & location column (same layout as education) -->
+        <div class="col-xs-2 cl-sm-2 col-md-2 text-center date-column">
+          {% if p.startDate and p.startDate != '' %}
+            {% assign startDate = p.startDate | split: '-' | slice: 0, 2 | join: '.' %}
+            {% assign endDate = p.endDate | split: '-' | slice: 0, 2 | join: '.' | default: 'Present' %}
+            {% assign date = startDate | append: ' - ' | append: endDate %}
+          {% else %}
+            {% assign date = null %}
+          {% endif %}
+
+          <table class="table-cv">
+            <tbody>
+              <tr>
+                <td>
+                  {% if date %}
+                    <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">
+                      {{ date }}
+                    </span>
+                  {% endif %}
+                </td>
+              </tr>
+              {% if p.location %}
+                <tr>
+                  <td>
+                    <p class="location">
+                      <i class="fa-solid fa-location-dot iconlocation"></i>
+                      {{ p.location }}
+                    </p>
+                  </td>
+                </tr>
+              {% endif %}
+            </tbody>
+          </table>
         </div>
-        <div class="col-sm-3 text-sm-right">
-          {{ p.startDate }}{% if p.endDate %} – {{ p.endDate }}{% endif %}
+
+        <!-- Content column -->
+        <div class="col-xs-10 cl-sm-10 col-md-10 mt-2 mt-md-0">
+          <h6 class="title font-weight-bold ml-1 ml-md-4">
+            {% if p.url %}
+              <a href="{{ p.url }}">{{ p.name }}</a>
+            {% else %}
+              {{ p.name }}
+            {% endif %}
+          </h6>
+
+          {% comment %}
+            Optional secondary lines (only render if present).
+            Use either p.role / p.venue if your data includes them; otherwise omit.
+          {% endcomment %}
+          {% if p.role %}
+            <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ p.role }}</h6>
+          {% endif %}
+          {% if p.venue %}
+            <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ p.venue }}</h6>
+          {% endif %}
+
+          {% if p.summary %}
+            <p class="ml-1 ml-md-4">{{ p.summary }}</p>
+          {% endif %}
+
+          {% if p.highlights and p.highlights.size > 0 %}
+            <ul class="items ml-1 ml-md-4">
+              {% for h in p.highlights %}
+                <li><span class="item">{{ h }}</span></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
         </div>
       </div>
-      {% if p.summary %}<p>{{ p.summary }}</p>{% endif %}
-      {% if p.highlights %}
-        <ul>{% for h in p.highlights %}<li>{{ h }}</li>{% endfor %}</ul>
-      {% endif %}
-    </div>
+    </li>
   {% endfor %}
-</section>
+</ul>
