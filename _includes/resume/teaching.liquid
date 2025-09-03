@@ -1,0 +1,17 @@
+{% assign items = site.data.resume.teaching | default: empty %}
+{% for t in items %}
+  <div class="item">
+    <div class="row">
+      <div class="col-sm-9">
+        {% if t.role %}<strong>{{ t.role }}</strong>{% endif %}
+        {% if t.course %}{% if t.role %} — {% endif %}{{ t.course }}{% endif %}
+        {% if t.institution %}, {{ t.institution }}{% endif %}
+      </div>
+      <div class="col-sm-3 text-sm-right">
+        {{ t.startDate }}{% if t.endDate %} – {{ t.endDate }}{% else %} – present{% endif %}
+      </div>
+    </div>
+    {% if t.summary %}<p>{{ t.summary }}</p>{% endif %}
+    {% if t.highlights %}<ul>{% for h in t.highlights %}<li>{{ h }}</li>{% endfor %}</ul>{% endif %}
+  </div>
+{% endfor %}
