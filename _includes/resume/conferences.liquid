@@ -7,8 +7,7 @@
         <div class="col-xs-2 cl-sm-2 col-md-2 text-center date-column">
           {% if p.startDate and p.startDate != '' %}
             {% assign startDate = p.startDate | split: '-' | slice: 0, 2 | join: '.' %}
-            {% assign endDate = p.endDate | split: '-' | slice: 0, 2 | join: '.' | default: 'Present' %}
-            {% assign date = startDate | append: ' - ' | append: endDate %}
+            {% assign date = startDate %}
           {% else %}
             {% assign date = null %}
           {% endif %}
