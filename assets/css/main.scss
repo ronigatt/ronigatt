@@ -29,21 +29,22 @@ $max-content-width: {{ site.max_width }};
   text-transform: capitalize;   /* "awards" -> "Awards", "professional experience" -> "Professional Experience" */
 }
 
-/* Force a nice title for this section */
-.cv-section#professional_experience h3 {
-  visibility: hidden;
-  position: relative;
-}
-.cv-section#professional_experience h3::after {
-  content: "Professional Experience";
-  visibility: visible;
-  position: absolute;
-  left: 0;
-  top: 0;
-  text-transform: none; /* keep text exactly as typed */
+#professional_experience > h3:first-child {
+  display: none;
 }
 
+/* Awards section styling */
+.cv-section#awards li,
 .cv-section#awards a {
-  color: inherit;
+  color: #7b1fa2;   /* choose whatever color you want (purple here) */
+}
+
+/* Remove default link styles */
+.cv-section#awards a {
+  text-decoration: none;
+}
+
+/* Add underline on hover (optional) */
+.cv-section#awards a: {
   text-decoration: underline;
 }
