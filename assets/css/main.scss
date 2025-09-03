@@ -28,3 +28,17 @@ $max-content-width: {{ site.max_width }};
 .cv-section h3 { 
   text-transform: capitalize;   /* "awards" -> "Awards", "professional experience" -> "Professional Experience" */
 }
+
+/* Force a nice title for this section */
+.cv-section#professional_experience h3 {
+  visibility: hidden;
+  position: relative;
+}
+.cv-section#professional_experience h3::after {
+  content: "Professional Experience";
+  visibility: visible;
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-transform: none; /* keep text exactly as typed */
+}
