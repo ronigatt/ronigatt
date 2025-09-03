@@ -1,0 +1,22 @@
+<section class="cv-section" id="professional_experience">
+  <h3>Professional Experience</h3>
+  {% assign items = site.data.resume.professional_experience | default: empty %}
+  {% for w in items %}
+    <div class="item">
+      <div class="row">
+        <div class="col-sm-9">
+          {% if w.position %}<strong>{{ w.position }}</strong>{% endif %}
+          {% if w.name %}{% if w.position %}, {% endif %}{{ w.name }}{% endif %}
+          {% if w.location %} — {{ w.location }}{% endif %}
+        </div>
+        <div class="col-sm-3 text-sm-right">
+          {{ w.startDate }}{% if w.endDate %} – {{ w.endDate }}{% else %} – present{% endif %}
+        </div>
+      </div>
+      {% if w.summary %}<p>{{ w.summary }}</p>{% endif %}
+      {% if w.highlights %}
+        <ul>{% for h in w.highlights %}<li>{{ h }}</li>{% endfor %}</ul>
+      {% endif %}
+    </div>
+  {% endfor %}
+</section>
