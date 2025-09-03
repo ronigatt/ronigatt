@@ -1,22 +1,19 @@
-<section class="cv-section" id="awards">
-  <h3>Awards</h3>
-  {% assign items = site.data.resume.awards | default: site.data.cv.awards | default: empty %}
-  {% for a in items %}
-    <div class="item">
-      <div class="row">
-        <div class="col-sm-9">
-          {% if a.url %}
-            <a href="{{ a.url }}">{{ a.title }}</a>
-          {% else %}
-            <strong>{{ a.title }}</strong>
-          {% endif %}
-          {% if a.awarder %} — {{ a.awarder }}{% endif %}
-        </div>
-        <div class="col-sm-3 text-sm-right">
-          {{ a.date }}
-        </div>
+{% assign items = site.data.resume.awards | default: empty %}
+{% for a in items %}
+  <div class="item">
+    <div class="row">
+      <div class="col-sm-9">
+        {% if a.url %}
+          <a href="{{ a.url }}">{{ a.title }}</a>
+        {% else %}
+          <strong>{{ a.title }}</strong>
+        {% endif %}
+        {% if a.awarder %} — {{ a.awarder }}{% endif %}
       </div>
-      {% if a.summary %}<p>{{ a.summary }}</p>{% endif %}
+      <div class="col-sm-3 text-sm-right">
+        {{ a.date }}
+      </div>
     </div>
-  {% endfor %}
-</section>
+    {% if a.summary %}<p>{{ a.summary }}</p>{% endif %}
+  </div>
+{% endfor %}
