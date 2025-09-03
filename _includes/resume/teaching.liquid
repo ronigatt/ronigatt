@@ -1,16 +1,24 @@
-{% assign items = site.data.resume.teaching | default: empty %}
-{% for t in items %}
-  <div class="item">
-    <div class="row">
-      <div class="col-sm-9">
-        {% if t.role %}<strong>{{ t.role }}</strong>{% endif %}
-        {% if t.course %}{% if t.role %} — {% endif %}{{ t.course }}{% endif %}
-        {% if t.institution %}, {{ t.institution }}{% endif %}
+{% comment %} _includes/resume/teaching.liquid {% endcomment %}
+{% assign items = site.data.resume.teaching | default: "" %}
+
+{%- if items and items != "" and items.size > 0 -%}
+  {%- for t in items -%}
+  <div class="cv-item row">
+    <div class="col-sm-3 text-muted">
+      {%- if t.startDate -%}{{ t.startDate }}{%- endif -%}
+      {%- if t.endDate -%} – {{ t.endDate }}{%- endif -%}
+    </div>
+    <div class="col-sm-9">
+      <div class="h5 mb-1">
+        {{ t.course }}
+        {%- if t.role -%} · <span class="text-muted">{{ t.role }}</span>{%- endif -%}
       </div>
-      <div class="col-sm-3 text-sm-right">
-        {{ t.startDate }}{% if t.endDate %} – {{ t.endDate }}{% else %} – present{% endif %}
+      <div class="text-muted">
+        {%- if t.institution -%}{{ t.institution }}{%- endif -%}
       </div>
     </div>
-    {% if t.summary %}<p>{{ t.summary }}</p>{% endif %}
   </div>
-{% endfor %}
+  {%- endfor -%}
+{%- else -%}
+  <!-- teaching section found but empty -->
+{%- endif -%}
