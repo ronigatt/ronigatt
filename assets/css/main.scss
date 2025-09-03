@@ -25,25 +25,23 @@ $max-content-width: {{ site.max_width }};
 ;
 
 /* ---- CV tweaks ---- */
-.cv-section h3 { 
-  text-transform: capitalize;   /* "awards" -> "Awards", "professional experience" -> "Professional Experience" */
-}
 
+/* Hide the theme's auto-generated section heading */
+#professional_experience > h2:first-child,
 #professional_experience > h3:first-child {
   display: none;
 }
 
-/* Awards section styling */
-.cv-section#awards li,
-.cv-section#awards a {
-  color: #7b1fa2;   /* choose whatever color you want (purple here) */
+/* Make all text in Awards the same color */
+#awards {
+  color: var(--global-theme-color); /* or any hex you prefer */
 }
 
-/* Remove default link styles */
-.cv-section#awards a {
-  text-decoration: none;
-}
-
-.cv-section#awards a {
-  text-decoration: underline;
+/* Force links to inherit the same color and show underline */
+#awards a,
+#awards a:visited,
+#awards a:hover,
+#awards a:active {
+  color: inherit;
+  text-decoration: underline;   /* change to none/hover if you prefer */
 }
