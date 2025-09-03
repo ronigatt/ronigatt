@@ -44,7 +44,6 @@ $max-content-width: {{ site.max_width }};
   text-decoration: none;
 }
 
-/* Add underline on hover (optional) */
-.cv-section#awards a: {
+.cv-section#awards a {
   text-decoration: underline;
 }
