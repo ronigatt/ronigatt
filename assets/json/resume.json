@@ -133,7 +133,8 @@
       "name": "Enhanced capillary delivery with nanobubble-mediated blood–brain barrier opening and advanced high-resolution vascular segmentation",
       "publisher": "Journal of Controlled Release",
       "releaseDate": "2023",
-      "authors": ["Gattegno R", "Arbel L", "Reiss N", "Katz S", "Ilovitsh T"]
+      "authors": ["Gattegno R", "Arbel L", "Reiss N", "Katz S", "Ilovitsh T"],
+      "selected": true
     },
     {
       "name": "Protocol to assess extravasation of fluorescent molecules in mice after ultrasound-mediated blood–brain barrier opening",
