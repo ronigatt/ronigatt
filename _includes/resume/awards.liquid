@@ -6,11 +6,9 @@
       <div class="row">
         <div class="col-sm-9">
           {% if a.url %}
-            <!-- Real link: gets both color + underline -->
-            <a href="{{ a.url }}" class="award-link">{{ a.title }}</a>
+            <a href="{{ a.url }}" class="award-title">{{ a.title }}</a>
           {% else %}
-            <!-- Fake link: styled like link but no underline -->
-            <span class="award-fake-link">{{ a.title }}</span>
+            <span class="award-title">{{ a.title }}</span>
           {% endif %}
           {% if a.awarder %} — {{ a.awarder }}{% endif %}
         </div>
@@ -22,3 +20,8 @@
     </div>
   {% endfor %}
 </section>
+      </div>
+    </div>
+    {% if a.summary %}<p>{{ a.summary }}</p>{% endif %}
+  </div>
+{% endfor %}
