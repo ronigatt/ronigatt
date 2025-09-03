@@ -1,4 +1,11 @@
 <h3 class="cv-section-title">Professional Experience</h3>
+<style>
+  /* Hide any auto-inserted heading before or inside #professional_experience */
+  #professional_experience > h2:first-child,
+  #professional_experience > h3:first-child {
+    display: none;
+  }
+</style>
 <ul class="card-text font-weight-light list-group list-group-flush">
   {% assign items = site.data.resume.professional_experience | sort: 'startDate' | reverse %}
   {% for content in items %}
